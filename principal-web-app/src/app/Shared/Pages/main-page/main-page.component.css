@@ -1,0 +1,7 @@
+.main-page{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    bottom:0px;
+    top:5px
+}

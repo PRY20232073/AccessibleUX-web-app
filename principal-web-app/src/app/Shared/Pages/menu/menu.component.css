@@ -1,5 +1,19 @@
-.p-megamenu .p-component .p-megamenu-vertical {
-    position: fixed;
-    height: 100%!important;
+.menu-sidebar{
+  
+    height: 100%;
+    background-color: aliceblue;
+    align-items: center;
+}
+.menu-sidebar {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-top-right-radius: 16px;
+
+}
+.menu-sidebar :hover{
+    color: white;
 }
 

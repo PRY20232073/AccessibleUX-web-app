@@ -1,130 +1,195 @@
 import { Component,OnInit} from '@angular/core';
-import { MegaMenuModule } from 'primeng/megamenu';
-
+import { PanelMenuModule } from 'primeng/panelmenu';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit{
-  items: MegaMenuModule[] | undefined;
-
+  items: PanelMenuModule[] | undefined;
+  display:any;
   ngOnInit() {
+    this.display=true;
     this.items = [
         {
-            label: 'Videos',
-            icon: 'pi pi-fw pi-video',
-            items: [
-                [
-                    {
-                        label: 'Video 1',
-                        items: [{ label: 'Video 1.1' }, { label: 'Video 1.2' }]
-                    },
-                    {
-                        label: 'Video 2',
-                        items: [{ label: 'Video 2.1' }, { label: 'Video 2.2' }]
-                    }
-                ],
-                [
-                    {
-                        label: 'Video 3',
-                        items: [{ label: 'Video 3.1' }, { label: 'Video 3.2' }]
-                    },
-                    {
-                        label: 'Video 4',
-                        items: [{ label: 'Video 4.1' }, { label: 'Video 4.2' }]
-                    }
-                ]
-            ]
+            label: 'Inicio', icon: 'pi pi-fw pi-home',routerLink:"/main"
         },
         {
-            label: 'Users',
-            icon: 'pi pi-fw pi-users',
-            items: [
-                [
-                    {
-                        label: 'User 1',
-                        items: [{ label: 'User 1.1' }, { label: 'User 1.2' }]
-                    },
-                    {
-                        label: 'User 2',
-                        items: [{ label: 'User 2.1' }, { label: 'User 2.2' }]
-                    }
-                ],
-                [
-                    {
-                        label: 'User 3',
-                        items: [{ label: 'User 3.1' }, { label: 'User 3.2' }]
-                    },
-                    {
-                        label: 'User 4',
-                        items: [{ label: 'User 4.1' }, { label: 'User 4.2' }]
-                    }
-                ],
-                [
-                    {
-                        label: 'User 5',
-                        items: [{ label: 'User 5.1' }, { label: 'User 5.2' }]
-                    },
-                    {
-                        label: 'User 6',
-                        items: [{ label: 'User 6.1' }, { label: 'User 6.2' }]
-                    }
-                ]
-            ]
+            label: 'Guideline Foundations', icon: 'pi pi-fw pi-palette',
+            items: [                 
+                {
+                    label: 'Information Architecture',    
+                    routerLink:"/guidelines/IA"
+                }, { 
+                    separator: true 
+                },
+                {
+                    label: 'Browser Window Features',
+                    routerLink:"/guidelines/Browser_Window_Features"
+                },
+                { 
+                    separator: true 
+                },
+                {
+                    label: 'Tipography',
+                    routerLink:"/guidelines/Tipografia"    
+                },
+                { 
+                    separator: true 
+                }, 
+                {
+                    label: 'Color', 
+                    routerLink:"/guidelines/Color"   
+                },
+                { 
+                    separator: true 
+                },
+                {
+                    label: 'Selection',
+                    items: [
+                        {
+                            label: 'CheckBox',
+                            routerLink:"/guidelines/CheckBox"      
+                        }, 
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'ComboBox'    ,
+                            routerLink:"/guidelines/ComboBox"   
+                        },
+                    ]  
+                },
+                { 
+                    separator: true 
+                },
+                {
+                    label: 'Containment',
+                    items: [
+                        {
+                            label: 'Listas'   ,
+                            routerLink:"/guidelines/Listas"    
+                        }, 
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Tablas' ,
+                            routerLink:"/guidelines/Tables"      
+                        },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Dividers',
+                            routerLink:"/guidelines/Dividers"       
+                        },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Alert Messages' ,
+                            routerLink:"/guidelines/Alert_Messages"     
+                        },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Cards'  ,
+                            routerLink:"/guidelines/Cards"    
+                        },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Pictures',
+                            routerLink:"/guidelines/Pictures"      
+                        },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Links',
+                            routerLink:"/guidelines/Links"      
+                        },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Progress Indicators',
+                            routerLink:"/guidelines/Progress_Indication"      
+                        },
+                         { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Maps' ,
+                            routerLink:"/guidelines/Maps"     
+                        }
+                        
+                    ]  
+                },
+                { 
+                    separator: true 
+                },
+                {
+                    label: 'Input',
+                    items: [
+                        {
+                            label: 'TextFields'    
+                        },
+                        { 
+                            separator: true ,
+                            routerLink:"/guidelines/TextFields"  
+                        },
+                        {
+                            label: 'NumberFields' ,
+                            routerLink:"/guidelines/NumberFields"     
+                        },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Simple Forms'    ,
+                            routerLink:"/guidelines/Formularios"  
+                        },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Complex Forms' ,
+                            routerLink:"/guidelines/Formularios"     
+                        },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'TimePicker' ,
+                            routerLink:"/guidelines/TimePickers"     
+                        }        
+                    ]  
+                },                
+                { 
+                    separator: true 
+                },                
+                {
+                    label: 'Buttons',
+                    routerLink:"/guidelines/Actions" , 
+                    items:[
+                        {
+                            label: 'Search',
+                            routerLink:"/guidelines/Searcg"      
+                        }
+                    ] 
+                },
+                
+            ],
+            routerLink: ['/main-guidelines'],
         },
         {
-            label: 'Events',
-            icon: 'pi pi-fw pi-calendar',
-            items: [
-                [
-                    {
-                        label: 'Event 1',
-                        items: [{ label: 'Event 1.1' }, { label: 'Event 1.2' }]
-                    },
-                    {
-                        label: 'Event 2',
-                        items: [{ label: 'Event 2.1' }, { label: 'Event 2.2' }]
-                    }
-                ],
-                [
-                    {
-                        label: 'Event 3',
-                        items: [{ label: 'Event 3.1' }, { label: 'Event 3.2' }]
-                    },
-                    {
-                        label: 'Event 4',
-                        items: [{ label: 'Event 4.1' }, { label: 'Event 4.2' }]
-                    }
-                ]
-            ]
-        },
-        {
-            label: 'Settings',
-            icon: 'pi pi-fw pi-cog',
-            items: [
-                [
-                    {
-                        label: 'Setting 1',
-                        items: [{ label: 'Setting 1.1' }, { label: 'Setting 1.2' }]
-                    },
-                    {
-                        label: 'Setting 2',
-                        items: [{ label: 'Setting 2.1' }, { label: 'Setting 2.2' }]
-                    },
-                    {
-                        label: 'Setting 3',
-                        items: [{ label: 'Setting 3.1' }, { label: 'Setting 3.2' }]
-                    }
-                ],
-                [
-                    {
-                        label: 'Technology 4',
-                        items: [{ label: 'Setting 4.1' }, { label: 'Setting 4.2' }]
-                    }
-                ]
-            ]
+            label: 'Interfaces', icon: 'pi pi-fw pi-clone',
+            routerLink: ['/main-interfaces']
         }
-    ];
+    ]
   }
 }

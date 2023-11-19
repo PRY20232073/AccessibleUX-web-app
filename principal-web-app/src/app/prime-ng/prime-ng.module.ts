@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Import PrimeNG modules
 import { AccordionModule } from 'primeng/accordion';
 import { AutoCompleteModule } from 'primeng/autocomplete';
@@ -93,6 +93,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
   declarations: [],
   imports: [
     CommonModule,
+    BrowserAnimationsModule,
     /**PRIME-NG**/
     AvatarModule,
     AvatarGroupModule,

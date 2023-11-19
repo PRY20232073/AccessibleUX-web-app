@@ -19,7 +19,7 @@ import {PrimeNgModule} from "./prime-ng/prime-ng.module";
     /*Other Modules*/
     SharedModule,
     InterfacesModule,
-    GuidelineModule
+    GuidelineModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

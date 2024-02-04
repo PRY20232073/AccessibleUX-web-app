@@ -22,7 +22,7 @@ export class GuidelinePageComponent implements OnInit{
           this.titulo = 'Browser Window Features';
           this.descripcion = 'Las características de la ventana del navegador se refieren a las funcionalidades específicas que un navegador web proporciona, como pestañas, marcadores, historial, entre otros, que afectan la experiencia del usuario al interactuar con la aplicación.';
       } else if (this.ruta === 'Tipografia') {
-        this.titulo = 'Tipography';
+        this.titulo = 'Tipografía';
         this.descripcion = 'La tipografía en el diseño se refiere al estilo y disposición de las letras y textos. La elección adecuada de fuentes y su presentación impactan significativamente la legibilidad y el atractivo visual del contenido.';
       }else if (this.ruta === 'Color') {
         this.titulo = 'Color';
@@ -63,6 +63,15 @@ export class GuidelinePageComponent implements OnInit{
     }else if (this.ruta === 'Actions') {
       this.titulo = 'Buttons';
       this.descripcion = 'Los botones son los que desencadenaran varias de las funcionalidades por lo que es necesario que sean faciles de entender';
+    }else if (this.ruta === 'Formularios') {
+      this.titulo = 'Formularios';
+      this.descripcion = 'Los formularios son los que permiten al usuario ingresar sus datos a la aplicacion por lo que es necesario que sean faciles de entender';
+    }else if (this.ruta === 'TextFields') {
+      this.titulo = 'TextFields';
+      this.descripcion = 'Los TextFields o campos de texto son los que permiten al usuario ingresar datos no numericos a la aplicacion por lo que es necesario que sean faciles de entender';
+    }else if (this.ruta === 'Complex_Forms') {
+      this.titulo = 'Formularios Complejos';
+      this.descripcion = 'Los formularios Complejos son los que permiten al usuario ingresar una gran cantidad de datos a la aplicacion por lo que es necesario que sean faciles de entender';
     }
   }
 }

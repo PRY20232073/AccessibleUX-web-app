@@ -1,3 +1,4 @@
+<p>interfaces-main-page works!</p>
 <div class="main-page">
     <div class="menu">
         <app-menu></app-menu>
@@ -12,7 +13,7 @@
                         <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
                         <div class="card__header-text">
                         <div class="card__header-text" style="text-align: center;">
-                            <h3 class="card__title">Interfaces Web para plataformas de Salud Publica</h3>            
+                            <h3 class="card__title">Interfaces Web de Salud</h3>            
                         </div>
                         </div>
                       </div>
@@ -23,35 +24,68 @@
         </div>        
         <p-divider></p-divider>
 
-       <div class="principal-content-cards">
         <div>
-            <a href="https://centro-de-salud-upc.web.app" class="card">
-                <img src="https://lh3.googleusercontent.com/mLGakWFjdX3zGBIhCUWqzjlj3gUXOY8hOed_ISzomlpNmjKWUiqCFyNGGAZFneVaK30v4GUpjn7lyIsI2Z7KPvMKrYkumzBr2nwbVe3BQKRkpam3sA=w960" class="card__image" alt=""  />
-                <div class="card__overlay">
-                  <div class="card__header">
-                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                    <div class="card__header-text">
-                      <h3 class="card__title">Interfaces Web De Salud</h3>            
-                    </div>
-                  </div>
-                  <p class="card__description">Revisa Las interfaces desarolladas</p>
-                </div>
-              </a>      
-        </div>
-        <div>
-            <a href="https://github.com/PRY20232073/Demo-web-app" class="card">
-                <img src="https://cdn1.vogel.de/unsafe/800x0/smart/images.vogel.de/vogelonline/bdb/1286800/1286845/original.jpg" class="card__image" alt=""  />
-                <div class="card__overlay">
-                  <div class="card__header">
-                    <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                    <div class="card__header-text">
-                      <h3 class="card__title">Accede a nuestro Repositorio</h3>            
-                    </div>
-                  </div>
-                  <p class="card__description">Revisa el codigo fuente</p>
-                </div>
-              </a>      
-        </div>
-       </div>
+          <nav class="slidemenu">
+  
+            <!-- Item 1 -->
+            <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle" checked (click)="changeViewTest(1)"/>
+            <label for="slide-item-1"><p class="icon" ><i class="pi pi-calendar-plus"></i></p><span>Crear Cita</span></label>
+            
+            <!-- Item 2 -->
+            <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle" (click)="changeViewTest(2)"/>
+            <label for="slide-item-2"><p class="icon"  ><i class="pi pi-calendar"></i></p><span>Consultar Cita</span></label>
+            
+            <!-- Item 3 -->
+            <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle" (click)="changeViewTest(3)"/>
+            <label for="slide-item-3"><p class="icon"><i class="pi pi-briefcase"></i></p><span>Especialidades</span></label>
+            
+            <!-- Item 4 -->
+            <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle" (click)="changeViewTest(4)"/>
+            <label for="slide-item-4"><p class="icon"><i class="pi pi-phone"></i></p><span>En Contacto</span></label>
+
+             <!-- Item 4 -->
+            <input type="radio" name="slideItem" id="slide-item-5" class="slide-toggle" (click)="changeViewTest(5)" />
+            <label for="slide-item-5"><p class="icon"><i class="pi pi-comments"></i></p><span>Buzón de Sugerencias</span></label>
+
+             <!-- Item 4 -->
+             <input type="radio" name="slideItem" id="slide-item-6" class="slide-toggle" (click)="changeViewTest(6)"/>
+             <label for="slide-item-6"><p class="icon"><i class="pi pi-thumbs-down-fill"></i></p><span>Buzón de Quejas</span></label>
+              
+             <!-- Item 4 -->
+             <input type="radio" name="slideItem" id="slide-item-7" class="slide-toggle" (click)="changeViewTest(7)"/>
+             <label for="slide-item-7"><p class="icon"><i class="pi pi-map"></i></p><span>Ubicaciones</span></label>
+
+            <div class="clear"></div>
+            
+            <!-- Bar -->
+            <div class="slider">
+              <div class="bar"></div>
+            </div>
+            
+          </nav>
+    </div>
+
+    <div style="padding-bottom: 30px;">
+      <ng-template [ngIf]="vista === 1">
+        <app-crear-cita-view></app-crear-cita-view>
+      </ng-template>      
+      <ng-template [ngIf]="vista === 2">
+        <app-consultar-cita-view></app-consultar-cita-view>
+      </ng-template>
+      <ng-template [ngIf]="vista === 3">
+        <app-especialidades-view></app-especialidades-view>
+      </ng-template>
+      <ng-template [ngIf]="vista === 4">
+        <app-en-contacto-view></app-en-contacto-view>
+      </ng-template>
+      <ng-template [ngIf]="vista === 5">
+        <app-buzon-view></app-buzon-view>
+      </ng-template>
+      <ng-template [ngIf]="vista === 6">
+        <app-buzon-quejas-view></app-buzon-quejas-view>
+      </ng-template>
+      <ng-template [ngIf]="vista === 7">
+        <app-ubicaciones-view></app-ubicaciones-view>
+      </ng-template>
     </div>
 </div>

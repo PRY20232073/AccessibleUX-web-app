@@ -16,7 +16,14 @@ export class MenuComponent implements OnInit{
         },
         {
             label: 'Guideline Foundations', icon: 'pi pi-fw pi-palette',
-            items: [                 
+            items: [ 
+                {
+                    label: 'General Information',   
+                    icon: 'pi pi-fw pi-palette', 
+                    routerLink:"/main-guidelines"
+                },  {
+                    separator: true
+                }     ,          
                 {
                     label: 'Information Architecture',    
                     routerLink:"/guidelines/IA"
@@ -31,7 +38,7 @@ export class MenuComponent implements OnInit{
                     separator: true 
                 },
                 {
-                    label: 'Tipography',
+                    label: 'Tipografía',
                     routerLink:"/guidelines/Tipografia"    
                 },
                 { 
@@ -137,10 +144,11 @@ export class MenuComponent implements OnInit{
                     items: [
                         {
                             label: 'TextFields'    
+                            ,routerLink:"/guidelines/TextFields"  
                         },
                         { 
                             separator: true ,
-                            routerLink:"/guidelines/TextFields"  
+                            
                         },
                         {
                             label: 'NumberFields' ,
@@ -158,7 +166,7 @@ export class MenuComponent implements OnInit{
                         },
                         {
                             label: 'Complex Forms' ,
-                            routerLink:"/guidelines/Formularios"     
+                            routerLink:"/guidelines/Complex_Forms"     
                         },
                         { 
                             separator: true 
@@ -178,13 +186,12 @@ export class MenuComponent implements OnInit{
                     items:[
                         {
                             label: 'Search',
-                            routerLink:"/guidelines/Searcg"      
+                            routerLink:"/guidelines/Search"      
                         }
                     ] 
                 },
                 
-            ],
-            routerLink: ['/main-guidelines'],
+            ]
         },
         {
             label: 'Interfaces', icon: 'pi pi-fw pi-clone',

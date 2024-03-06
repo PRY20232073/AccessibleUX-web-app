@@ -15,15 +15,9 @@ export class MenuComponent implements OnInit{
             label: 'Inicio', icon: 'pi pi-fw pi-home',routerLink:"/main"
         },
         {
-            label: 'Guideline Foundations', icon: 'pi pi-fw pi-palette',
+            label: 'Style Foundations', icon: 'pi pi-fw pi-palette', routerLink:"/main-guidelines",
             items: [ 
-                {
-                    label: 'General Information',   
-                    icon: 'pi pi-fw pi-palette', 
-                    routerLink:"/main-guidelines"
-                },  {
-                    separator: true
-                }     ,          
+                         
                 {
                     label: 'Information Architecture',    
                     routerLink:"/guidelines/IA"
@@ -47,12 +41,15 @@ export class MenuComponent implements OnInit{
                 {
                     label: 'Color', 
                     routerLink:"/guidelines/Color"   
-                },
-                { 
-                    separator: true 
-                },
+                }                
+            ]
+        },
+        {
+            label: 'Components', icon: 'pi pi-fw pi-th-large',
+            items:[
                 {
                     label: 'Selection',
+                    icon : 'pi pi-fw pi-check',
                     items: [
                         {
                             label: 'CheckBox',
@@ -72,6 +69,7 @@ export class MenuComponent implements OnInit{
                 },
                 {
                     label: 'Containment',
+                    icon : 'pi pi-fw pi-list',
                     items: [
                         {
                             label: 'Listas'   ,
@@ -141,6 +139,7 @@ export class MenuComponent implements OnInit{
                 },
                 {
                     label: 'Input',
+                    icon : 'pi pi-fw pi-pencil',
                     items: [
                         {
                             label: 'TextFields'    
@@ -182,6 +181,7 @@ export class MenuComponent implements OnInit{
                 },                
                 {
                     label: 'Buttons',
+                    icon : 'pi pi-fw pi-caret-right',
                     routerLink:"/guidelines/Actions" , 
                     items:[
                         {
@@ -190,7 +190,6 @@ export class MenuComponent implements OnInit{
                         }
                     ] 
                 },
-                
             ]
         },
         {

@@ -10,7 +10,6 @@
 .menu{
     width: 20%;
     background-color: aliceblue;
-    border:1px solid black;
     position: fixed;
     height: 100%;
     border-top-right-radius: 16px;

@@ -10,7 +10,7 @@
 .menu{
     width: 20%;
     background-color: aliceblue;
-    border:1px solid black;
+   
     position: fixed;
     height: 100%;
     border-top-right-radius: 16px;
@@ -21,32 +21,70 @@
     border-color: bisque;
     padding-left: 10px;
     margin-left: 20%; /* Set the width of your menu */
-
+    
 }
 .p-card-main{
     background-color: #000;
 }
 
-.principal-content-cards .child{
-    
+.title-component{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-}
-.principal-content-cards .card {
-    height: 100%;  
+    background-color: #ffffff;
+    color: white;
     border-radius: 16px;
-    overflow: hidden;
-    text-decoration: none;
-    border:1px solid gray;
-    
-  }
-.principal-content-header{
-    height: 250px;
-    border:1px solid gray;
-    border-radius: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: 400px;
 }
-.principal-content-header *{
-    box-sizing: border-box;
-  }
+.card-title-component {  
+  background-color: #F0F3E8;
+  color: black;
+  border-radius: 16px;
+  width: 55%;
+  max-height: 390px;
+  min-height: 390px;
+  padding-left: 20px; /* Add padding to the left */
+}
+.card-title-component-text1 {  
+  font: arial;
+  font-size: 70px;
+  font-weight: 540;
+  line-height: 96px;
+  margin-bottom: 3px;
+  padding-top: 90px;
+}
+.card-title-component-text2 {  
+  font: arial;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.card-guidelines{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: black;
+    border-radius: 16px;
+    background-color: #F0F3E8;
+    margin-left: 5px;
+    cursor: pointer; 
+}
+.card-guidelines h1{
+  font: arial;
+  font-size: 40px;
+  font-weight: 540;
+}
+
+.card-guidelines:hover {
+  transform: translateY(-1px);
+  opacity: 0.7;
+}
+
 .li{
     box-sizing: border-box;
 }
@@ -229,3 +267,27 @@
     color: #fff;
   }
   
+
+  
+  
+  .article-card-component {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms;
+    width: 44%;
+    height: 390px;
+}
+
+.article-card-component:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-card-component img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or "cover" if you want to maintain aspect ratio */
+}

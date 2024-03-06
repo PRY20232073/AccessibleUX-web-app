@@ -3,27 +3,26 @@
         <app-menu></app-menu>
     </div>
     <div class="principal-content">
-        <div class="principal-content-header">          
-             
-                  <a href="" class="card">
-                    <img src="https://assets-global.website-files.com/6009ec8cda7f305645c9d91b/60108448d93c73801f3e8ef6_6002086f72b72704e901e452_web-design-inspiration.jpeg" class="card__image" alt=""  />
-                    <div class="card__overlay">
-                      <div class="card__header">
-                        <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
-                        <div class="card__header-text">
-                        <div class="card__header-text" style="text-align: center;">
-                            <h3 class="card__title">{{titulo}}</h3>            
-                        </div>
-                        </div>
-                      </div>
-                      <p class="card__description">{{descripcion}}</p>
+        <div class="principal-content-header">      
+              <div class="title-component">       
+                    <div class="card-title-component">
+                      <div class="card-title-component-text1">{{titulo}}</div>
+                      <div class="card-title-component-text2">{{descripcion}}</div>
                     </div>
-                  </a>      
-                       
-        </div>        
+                    <div class="article-card-component">
+                      <img src="{{imgref}}" alt="{{descripcion}}" />
+                    </div>
+              </div>
+        </div>
+        <div class="card-guidelines" (click)="scrollToCards()">
+            <div class="icon">
+             <img src="../../../../assets/icons/guideline-icon.png" width="50" height="50">
+            </div>
+          <h1>Guidelines</h1>
+        </div>     
         <p-divider></p-divider>
 
-       <div class="principal-content-cards">
+       <div class="principal-content-cards" #cardsSection>
         <div class="child">
             <div class="center">
                 <div class="article-card">        

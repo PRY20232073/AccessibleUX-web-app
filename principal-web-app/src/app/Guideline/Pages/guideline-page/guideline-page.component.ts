@@ -108,6 +108,14 @@ export class GuidelinePageComponent implements OnInit{
       this.titulo = 'Search';
       this.descripcion = 'Son elementos  que permiten a los usuarios encontrar información específica dentro de un conjunto de datos, documentos, contenido web, o en una aplicación en general';
       this.imgref = 'https://img.freepik.com/premium-vector/various-search-bar-templates-internet-browser-engine-with-search-box-address-bar-text-field-ui-design-website-interface-element-with-web-icons-push-button-vector-illustration_970024-7842.jpg?w=2000'
+    }else if (this.ruta === 'Icon_Buttons') {
+      this.titulo = 'Icon Buttons';
+      this.descripcion = 'Los botones de iconos ayudan a las personas a realizar acciones complementarias con un solo toque. Se utilizan cuando se requiere un botón compacto, como en una barra de herramientas o una lista de imágenes.';
+      this.imgref = 'https://i.pinimg.com/originals/8b/cc/b7/8bccb78ea5be60bdfcfa72419d9cf600.png'
+    }else if (this.ruta === 'Menus') {
+      this.titulo = 'Menus';
+      this.descripcion = 'Es un elemento que permite a los usuarios, orientarse fácilmente en tu sitio web y dirigirse a donde quieren ir';
+      this.imgref = 'https://miro.medium.com/v2/resize:fit:1024/1*mpIg9ImJKCRkGdqwl1T-BA.jpeg'
     }
   }
   scrollToCards() {

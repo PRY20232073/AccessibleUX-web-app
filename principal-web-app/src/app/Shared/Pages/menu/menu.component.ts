@@ -62,6 +62,13 @@ export class MenuComponent implements OnInit{
                             label: 'ComboBox'    ,
                             routerLink:"/guidelines/ComboBox"   
                         },
+                        { 
+                            separator: true 
+                        },
+                        {
+                            label: 'Menus'    ,
+                            routerLink:"/guidelines/Menus"   
+                        },
                     ]  
                 },
                 { 
@@ -72,14 +79,14 @@ export class MenuComponent implements OnInit{
                     icon : 'pi pi-fw pi-list',
                     items: [
                         {
-                            label: 'Listas'   ,
+                            label: 'Lists'   ,
                             routerLink:"/guidelines/Listas"    
                         }, 
                         { 
                             separator: true 
                         },
                         {
-                            label: 'Tablas' ,
+                            label: 'Tables' ,
                             routerLink:"/guidelines/Tables"      
                         },
                         { 
@@ -171,7 +178,7 @@ export class MenuComponent implements OnInit{
                             separator: true 
                         },
                         {
-                            label: 'TimePicker' ,
+                            label: 'DatePicker' ,
                             routerLink:"/guidelines/TimePickers"     
                         }        
                     ]  
@@ -184,6 +191,13 @@ export class MenuComponent implements OnInit{
                     icon : 'pi pi-fw pi-caret-right',
                     routerLink:"/guidelines/Actions" , 
                     items:[
+                        {
+                            label: 'Icon Buttons',
+                            routerLink:"/guidelines/Icon_Buttons"      
+                        },
+                        { 
+                            separator: true 
+                        },
                         {
                             label: 'Search',
                             routerLink:"/guidelines/Search"      
